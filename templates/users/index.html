@@ -1,0 +1,16 @@
+{% extends 'users/base.html' %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'main.css' %}">
+<meta name="csrf-token" content="{{ csrf_token }}">
+<div class="container">
+    <div class="row g-0">
+        <div class="col-sm-6 col-md-8" id="header-text">
+
+        </div>
+        <div class="col-6 col-md-4" id="header-image"><img src="{% static 'viewcomponents/me.jpg' %}" alt="me"
+                style="width: 15dvh; height: 15dvh;"></div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,43 @@
+{% extends 'users/base.html' %}
+{% block content %}
+
+{% load static %}
+
+<aside style="background-color: rgba(0, 0, 0, .76); margin-top: 1dvh;">
+    <div style="margin-left: 3dvh">
+        <a href="https://www.facebook.com/manyatso.hato.7/"><i class="fa-brands fa-facebook"
+                aria-hidden="false"></i></a>
+        <svg src="{% static 'fontawesome/facebook-brands-solid.svg' %}" alt="Facebook"
+            style="width: 34px; height: 34px; color: white;">
+            <span style="color:white;">Username:Otah V Otah</span><br>
+
+            <a href="https://wa.me/58915474" target="_blank"><i class="fa-brands fa-whatsapp"
+                    aria-hidden="false"></i></a>
+            <svg src="{% static 'fontawesome/whatsapp-brands-solid.svg' %}" alt="whatsapp"
+                style="width: 34px; height: 34px;"><span style="color:white;">58915474</span><br>
+
+                <a href="tel:+26662598944"><i class="fa-solid fa-phone" aria-hidden="false"></i></a>
+                <svg src="{% static 'fontawesome/phone-solid.svg' %}" alt="whatsapp"
+                    style="width: 34px; height: 34px;"><span style="color:white;">62598944</span><br>
+
+                    <a href="#"><i class="fa-solid fa-location-dot" aria-hidden="false"></i></a>
+                    <svg src="{% static 'fontawesome/phone-solid.svg' %}" alt="whatsapp"
+                        style="width: 34px; height: 34px;">
+                        <span style="color:white;">[Ha-Tsolo,Bypass, Maseru
+                            Lesotho]</span><br>
+                        <a href="mailto:hatomanyatso@gmail.com"><i class="fa-regular fa-envelope"
+                                aria-hidden="false"></i></a>
+                        <svg src="{% static 'fontawesome/envelope-regular.svg' %}" alt="whatsapp"
+                            style="width: 34px; height: 34px;">
+                            <span style="color:white;">[hatomanyatso@gmail.com]</span><br>
+    </div>
+</aside>
+<div>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.718557747839!2d27.44718067541956!3d-29.349242875281128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e8c33538a75d42b%3A0x418eca7ee5b8b9a!2sMaseru%20Private%20Hospital!5e0!3m2!1sen!2sls!4v1723112033252!5m2!1sen!2sls"
+        width="400" height="400" style="border:0; margin-top: 2dvh; margin-left: 2dvh;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+{% endblock content %}

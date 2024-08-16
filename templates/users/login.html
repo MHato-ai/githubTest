@@ -1,0 +1,71 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h2></h2>
+    {% for message in messages %}
+    <div class="alert alert-{{message}} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong>{{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <br>
+    <br>
+    {% endfor %}
+
+    <form action="/signin" method="post">
+        {% csrf_token %}
+        <label for="">Username</label>
+        <input type="text" id="username" name="username" placeholder="create memorable Username" required>
+        <br>
+        <label for="">Password</label>
+        <input type="password" id="password" name="pass1" placeholder="Enter password" required>
+        <br>
+        <br>
+        <button type="submit">Sign In</button>
+    </form>
+
+</body>
+
+</html> -->
+
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<meta name="csrf-token" content="{{ csrf_token }}">
+<div class="container" style="margin-top: 30px;">
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4" style="color: white;">Sign In Now</legend>
+            {{ form_crispy }}
+            <label for="">Username</label><br>
+            <input type="text" id="username" name="username" placeholder="create memorable Username" required>
+            <br>
+            <label for="">Password</label><br>
+            <input type="password" id="password" name="pass1" placeholder="Enter password" required>
+            <br>
+            <br>
+        </fieldset>
+        <div class="form-group" id="signin-button">
+            <button class="btn " style="background-color: orangered;">Sign In</button>
+        </div>
+        <div class="form-group">
+            <small class="text-muted ml-3">Don't have an account yet? <a href="{% url 'signup' %}">Sign Up
+                    Today</a></small>
+        </div>
+    </form>
+</div>
+{% endblock %}</title>
